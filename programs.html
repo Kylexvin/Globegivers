@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlobeGivers | Making a Difference Together</title>
+   <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+   <style>
+       /* Base Styles */
+:root {
+ 
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --border-radius: 6px;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--white);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.3;
+  color: var(--dark-bg);
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style-type: none;
+  margin-bottom: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+/* Page Banner */
+.page-banner {
+  background: linear-gradient(rgba(44, 150, 68, 0.9), rgba(29, 110, 50, 0.9)), url('/images/banner-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.page-banner h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--white);
+}
+
+.page-banner p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Programs Overview */
+.programs-overview {
+  padding: 70px 0;
+}
+
+.section-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px;
+}
+
+.section-intro h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.section-intro h2:after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 3px;
+  background-color: var(--accent-color);
+  margin: 15px auto 0;
+}
+
+.section-intro p {
+  font-size: 1.1rem;
+  color: var(--text-light);
+}
+
+.program-navigation {
+  background-color: var(--light-bg);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.program-navigation ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 0;
+}
+
+.program-navigation a {
+  display: block;
+  padding: 10px 15px;
+  border-radius: 30px;
+  background-color: var(--white);
+  box-shadow: var(--box-shadow);
+  color: var(--text-color);
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.program-navigation a:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+  transform: translateY(-3px);
+}
+
+/* Program Detail Sections */
+.program-detail {
+  padding: 70px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.alternate-bg {
+  background-color: var(--light-bg);
+}
+
+.program-header {
+  margin-bottom: 40px;
+}
+
+.program-header h2 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--accent-color);
+  display: inline-block;
+}
+
+.program-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 25px;
+}
+
+.stat-item {
+  flex: 1;
+  min-width: 150px;
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  text-align: center;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+}
+
+.stat-item i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.stat-item span {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: var(--dark-bg);
+}
+
+.stat-item p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 0;
+}
+
+.program-content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 50px;
+  align-items: start;
+}
+
+.program-content-wrapper.reverse {
+  grid-template-columns: 1.5fr 1fr;
+  direction: rtl;
+}
+
+.program-content-wrapper.reverse .program-content,
+.program-content-wrapper.reverse .program-image {
+  direction: ltr;
+}
+
+.program-image {
+  position: sticky;
+  top: 30px;
+}
+
+.program-content h3 {
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.program-content h3:first-child {
+  margin-top: 0;
+}
+
+.program-content ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.program-content ul li {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.program-impact {
+  background-color: rgba(44, 150, 68, 0.05);
+  padding: 25px;
+  border-radius: var(--border-radius);
+  margin: 30px 0;
+  border-left: 4px solid var(--primary-color);
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.impact-item {
+  text-align: center;
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.impact-item i {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.impact-item h4 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  color: var(--dark-bg);
+}
+
+.impact-item p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 0;
+}
+
+.program-goals ul {
+  background-color: var(--white);
+  padding: 20px 40px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.testimonial {
+  background-color: var(--white);
+  padding: 25px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  position: relative;
+  margin-top: 30px;
+}
+
+.testimonial:before {
+  content: '"';
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  font-size: 4rem;
+  color: var(--primary-color);
+  opacity: 0.2;
+  font-family: Georgia, serif;
+}
+
+.testimonial p {
+  font-style: italic;
+  color: var(--text-color);
+}
+
+.testimonial-author {
+  font-weight: 600;
+  text-align: right;
+  color: var(--primary-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .program-content-wrapper,
+  .program-content-wrapper.reverse {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    direction: ltr;
+  }
+  
+  .program-image {
+    position: relative;
+    top: 0;
+  }
+  
+  .impact-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .page-banner {
+    padding: 60px 0;
+  }
+  
+  .page-banner h1 {
+    font-size: 2rem;
+  }
+  
+  .section-intro h2 {
+    font-size: 1.8rem;
+  }
+  
+  .program-stats {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .stat-item {
+    min-width: 100%;
+  }
+  
+  .program-navigation ul {
+    flex-direction: column;
+  }
+  
+  .program-navigation a {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-banner h1 {
+    font-size: 1.8rem;
+  }
+  
+  .page-banner p {
+    font-size: 1rem;
+  }
+  
+  .impact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+   </style>
+</head>
+<body>
+   
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <h1>GlobeGivers</h1>
+            </div>
+
+            <div class="hamburger">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">About Us</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="dropdown-item">Our History</a></li>
+                        <li><a href="#" class="dropdown-item">Mission & Vision</a></li>
+                        <li><a href="#" class="dropdown-item">Our Team</a></li>
+                        <li><a href="#" class="dropdown-item">Partners</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Programs & Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="dropdown-item">Education Support</a></li>
+                        <li><a href="#" class="dropdown-item">Community Health</a></li>
+                        <li><a href="#" class="dropdown-item">Environmental Projects</a></li>
+                        <li><a href="#" class="dropdown-item">Youth Development</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Get Involved</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="dropdown-item">Volunteer</a></li>
+                        <li><a href="#" class="dropdown-item">Become a Member</a></li>
+                        <li><a href="#" class="dropdown-item">Partnership Opportunities</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">News & Events</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="dropdown-item">Latest News</a></li>
+                        <li><a href="#" class="dropdown-item">Upcoming Events</a></li>
+                        <li><a href="#" class="dropdown-item">Press Releases</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
+                <li class="nav-item"><a href="#" class="cta-btn">Donate</a></li>
+            </ul>
+        </div>
+    </header>
+    <body>
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Our Programs & Services</h1>
+            <p>Making a sustainable impact on Mfangano Island and surrounding communities</p>
+        </div>
+    </section>
+
+    <!-- Programs Overview -->
+    <section class="programs-overview">
+        <div class="container">
+            <div class="section-intro">
+                <h2>How We're Making a Difference</h2>
+                <p>At GlobeGivers, we implement sustainable community-led programs that address the most pressing challenges facing Mfangano Island. Our holistic approach focuses on clean water access, sustainable agriculture, healthcare, empowerment, and infrastructure development.</p>
+            </div>
+            
+            <div class="program-navigation">
+                <ul>
+                    <li><a href="#water-project">Community Water Project</a></li>
+                    <li><a href="#agriculture">Organic & Permaculture Agriculture</a></li>
+                    <li><a href="#empowerment">Women & Youth Empowerment</a></li>
+                    <li><a href="#healthcare">Community Health Care Services</a></li>
+                    <li><a href="#infrastructure">Community Infrastructure Initiatives</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Individual Program Sections -->
+    <section id="water-project" class="program-detail">
+        <div class="container">
+            <div class="program-header">
+                <h2>Community Water Project</h2>
+                <div class="program-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-users"></i>
+                        <span>5,000</span>
+                        <p>Daily beneficiaries</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Mfangano Island</span>
+                        <p>Location</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Ongoing</span>
+                        <p>Project status</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="program-content-wrapper">
+                <div class="program-image">
+                    <img src="/images/img1.jpg" alt="Women collecting clean water at community water point">
+                </div>
+                <div class="program-content">
+                    <h3>The Challenge</h3>
+                    <p>Most families on Mfangano Island lack running water and rely on Lake Victoria for drinking, washing, and farming. However, the lake is heavily polluted with sewage, chemicals, and waste from three surrounding countries, posing significant health risks to the community.</p>
+                    
+                    <h3>Our Solution</h3>
+                    <p>To address this critical issue, we have established a clean water collection point serving up to 5,000 people daily. With a population of 37,000, we aim to expand access, reducing long travel distances for water.</p>
+                    
+                    <h3>Current Initiative: "Wakinga Community Clean Water Project"</h3>
+                    <p>Our ongoing project seeks to bring safe drinking water closer to more residents by:</p>
+                    <ul>
+                        <li>Installing additional water collection points in underserved areas</li>
+                        <li>Implementing water filtration systems</li>
+                        <li>Training community members in water management and conservation</li>
+                        <li>Establishing community-led water committees to ensure sustainability</li>
+                    </ul>
+                    
+                    <div class="program-impact">
+                        <h3>Impact to Date</h3>
+                        <div class="impact-grid">
+                            <div class="impact-item">
+                                <i class="fas fa-tint"></i>
+                                <h4>5,000+</h4>
+                                <p>People accessing clean water daily</p>
+                            </div>
+                            <div class="impact-item">
+                                <i class="fas fa-disease"></i>
+                                <h4>30%</h4>
+                                <p>Reduction in waterborne diseases</p>
+                            </div>
+                            <div class="impact-item">
+                                <i class="fas fa-clock"></i>
+                                <h4>2+ hours</h4>
+                                <p>Daily time saved for women and children</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="program-goals">
+                        <h3>Future Goals</h3>
+                        <ul>
+                            <li>Expand water access to reach 80% of Mfangano Island's population</li>
+                            <li>Install rainwater harvesting systems at schools and community centers</li>
+                            <li>Develop water resource management training programs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="agriculture" class="program-detail alternate-bg">
+        <div class="container">
+            <div class="program-header">
+                <h2>Organic & Permaculture Agriculture</h2>
+                <div class="program-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-seedling"></i>
+                        <span>200+</span>
+                        <p>Farmers trained</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-leaf"></i>
+                        <span>15+</span>
+                        <p>Sustainable crops</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-tree"></i>
+                        <span>Ongoing</span>
+                        <p>Project status</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="program-content-wrapper reverse">
+                <div class="program-image">
+                    <img src="/images/img1.jpg" alt="Local farmers using permaculture techniques">
+                </div>
+                <div class="program-content">
+                    <h3>The Challenge</h3>
+                    <p>Traditional farming methods on Mfangano Island have led to soil degradation, reduced biodiversity, and unsustainable land use. Many farmers struggle with decreasing yields and food insecurity as environmental conditions worsen.</p>
+                    
+                    <h3>Our Approach</h3>
+                    <p>We promote sustainable farming that balances food production, nature preservation, and rural livelihoods. By working with local farmers, we encourage:</p>
+                    <ul>
+                        <li>Soil-nurturing crop rotation and companion planting</li>
+                        <li>Biodiversity-friendly farming practices</li>
+                        <li>Land-clearing methods that preserve trees and wildlife habitats</li>
+                        <li>Water conservation techniques</li>
+                        <li>Natural pest management solutions</li>
+                    </ul>
+                    
+                    <div class="program-impact">
+                        <h3>Impact</h3>
+                        <div class="impact-grid">
+                            <div class="impact-item">
+                                <i class="fas fa-carrot"></i>
+                                <h4>40%</h4>
+                                <p>Increase in crop yields</p>
+                            </div>
+                            <div class="impact-item">
+                                <i class="fas fa-dollar-sign"></i>
+                                <h4>25%</h4>
+                                <p>Increase in farmer income</p>
+                            </div>
+                            <div class="impact-item">
+                                <i class="fas fa-globe-africa"></i>
+                                <h4>10+</h4>
+                                <p>Demonstration gardens established</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="program-goals">
+                        <h3>Current Initiatives</h3>
+                        <ul>
+                            <li>Community seed bank for indigenous and drought-resistant crop varieties</li>
+                            <li>Farmer-to-farmer training programs on sustainable techniques</li>
+                            <li>Market access development for organic produce</li>
+                            <li>School garden programs to teach children sustainable agriculture</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="empowerment" class="program-detail">
+        <div class="container">
+            <div class="program-header">
+                <h2>Women & Youth Empowerment</h2>
+                <div class="program-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <span>500+</span>
+                        <p>Loans distributed</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-venus"></i>
+                        <span>15</span>
+                        <p>Women's groups</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-store"></i>
+                        <span>200+</span>
+                        <p>Businesses supported</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="program-content-wrapper">
+                <div class="program-image">
+                    <img src="/images/img1.jpg" alt="Women entrepreneurs receiving training">
+                </div>
+                <div class="program-content">
+                    <h3>The Challenge</h3>
+                    <p>Women and youth on Mfangano Island face limited economic opportunities, barriers to education, and restricted access to healthcare and financial resources. This perpetuates cycles of poverty and inequality.</p>
+                    
+                    <h3>Our Solution</h3>
+                    <p>We support women and youth in achieving financial independence through small businesses, education, and healthcare access. Most women are now part of registered groups offering financial support and skills development.</p>
+                    
+                    <h3>Women's & Youth Microfinance Initiative</h3>
+                    <p>Our microfinance program provides small loans that help start or expand businesses like:</p>
+                    <ul>
+                        <li>Agricultural enterprises</li>
+                        <li>Retail shops and market stalls</li>
+                        <li>Beauty salons and tailoring services</li>
+                        <li>Small hotels and food services</li>
+                        <li>Transportation services</li>
+                    </ul>
+                    
+                    <div class="program-impact">
+                        <h3>Program Components</h3>
+                        <div class="impact-grid">
+                            <div class="impact-item">
+                                <i class="fas fa-coins"></i>
+                                <h4>Microloans</h4>
+                                <p>Low-interest, accessible loans</p>
+                            </div>
+                            <div class="impact-item">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                <h4>Training</h4>
+                                <p>Business and financial literacy</p>
+                            </div>
+                            <div class="impact-item">
+                                <i class="fas fa-users"></i>
+                                <h4>Mentorship</h4>
+                                <p>Guidance from successful entrepreneurs</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="program-goals">
+                        <h3>Success Stories</h3>
+                        <div class="testimonial">
+                            <p>"The loan I received helped me start my vegetable stand. Now I can pay for my children's education and even save for the future."</p>
+                            <div class="testimonial-author">- Mary N., Market Vendor</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="healthcare" class="program-detail alternate-bg">
+        <div class="container">
+            <div class="program-header">
+                <h2>Community Health Care Services</h2>
+                <div class="program-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-hospital"></i>
+                        <span>1</span>
+                        <p>Health center</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-user-md"></i>
+                        <span>5+</span>
+                        <p>Healthcare workers</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>Expanding</span>
+                        <p>Project status</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="program-content-wrapper reverse">
+                <div class="program-image">
+                    <img src="/images/img1.jpg" alt="Wakinga Community Health Center">
+                </div>
+                <div class="program-content">
+                    <h3>The Challenge</h3>
+                    <p>Access to healthcare on Mfangano Island is severely limited. Residents often travel long distances to reach medical facilities, which is particularly dangerous for emergency situations and maternal care. Many preventable conditions go untreated due to lack of affordable healthcare options.</p>
+                    
+                    <h3>Our Response</h3>
+                    <p>We are improving healthcare access by providing preventive services, first aid kits, and affordable medical care. Our Wakinga Community Health Center is expanding to offer low-cost and mostly free treatments, reducing health risks, especially for mothers giving birth far from clinics.</p>
+                    
+                    <h3>Wakinga Community Health Center</h3>
+                    <p>Currently undergoing phase two construction, our health center provides:</p>
+                    <ul>
+                        <li>Basic emergency medical services</li>
+                        <li>Maternal and child healthcare</li>
+                        <li>Preventive care and vaccinations</li>
+                        <li>Health education and outreach</li>
+                        <li>First aid training for community members</li>
+                    </ul>
+                    
+                    <div class="program-impact">
+                        <h3>Current Initiatives</h3>
+                        <div class="impact-grid">
+                            <div class="impact-item">
+                                <i class="fas fa-baby"></i>
+                                <h4>Maternal Care</h4>
+                                <p>Safe birth environments and prenatal services</p>
+                            </div>
+                            <div class="impact-item">
+                                <i class="fas fa-first-aid"></i>
+                                <h4>First Aid</h4>
+                                <p>Community emergency response training</p>
+                            </div>
+                            <div class="impact-item">
+                                <i class="fas fa-pills"></i>
+                                <h4>Medicine</h4>
+                                <p>Essential medication access</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="program-goals">
+                        <h3>Future Plans</h3>
+                        <ul>
+                            <li>Complete phase two construction of the health center</li>
+                            <li>Expand staff to include additional nurses and a full-time doctor</li>
+                            <li>Develop mobile clinic services for remote areas</li>
+                            <li>Implement telehealth consultations when appropriate</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="infrastructure" class="program-detail">
+        <div class="container">
+            <div class="program-header">
+                <h2>Community Infrastructure Initiatives</h2>
+                <div class="program-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-school"></i>
+                        <span>10+</span>
+                        <p>Schools supported</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>200+</span>
+                        <p>Students assisted</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-female"></i>
+                        <span>Special focus</span>
+                        <p>Girls & orphans</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="program-content-wrapper">
+                <div class="program-image">
+                    <img src="/images/img1.jpg" alt="School infrastructure project">
+                </div>
+                <div class="program-content">
+                    <h3>The Challenge</h3>
+                    <p>Educational infrastructure on Mfangano and sister islands is severely underdeveloped. Many schools lack adequate facilities, qualified teachers, and learning materials. This results in low graduation rates and limited opportunities for higher education.</p>
+                    
+                    <h3>Our Approach</h3>
+                    <p>We improve local institutions, focusing on education. Our goal is to ensure students graduate high school, pursue higher education, and gain valuable skills. We support primary, high schools, and post-secondary education, with special focus on girls, orphans, and vulnerable children on Mfangano and sister islands.</p>
+                    
+                    <h3>Key Focus Areas</h3>
+                    <ul>
+                        <li>School facility improvement and construction</li>
+                        <li>Educational materials and resources</li>
+                        <li>Teacher training and support</li>
+                        <li>Scholarship programs for vulnerable students</li>
+                        <li>Community learning centers for adult education</li>
+                    </ul>
+            
+    <script src="script.js"></script>
+    </html>
