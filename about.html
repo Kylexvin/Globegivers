@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlobeGivers | About Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+      <!-- CSS for enhanced styling -->
+<style>
+    /* Base Variables */
+:root {
+  --primary-color: #2E8B57;
+  --primary-color-dark: #1f6d3e;
+  --primary-color-light: #e9f7ef;
+  --secondary-color: #3498db;
+  --accent-color: #f39c12;
+  --background-white: #ffffff;
+  --background-light: #f9f9f9;
+  --text-dark: #333333;
+  --text-light: #666666;
+  --box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* Common Layout Elements */
+.about-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.island-svg {
+  max-width: 400px;
+  height: 100px;
+  margin: 1rem auto;
+}
+
+/* About Intro Section */
+.about-intro {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  align-items: center;
+}
+
+.intro-content {
+  flex: 1;
+}
+
+.intro-image {
+  flex: 1;
+  position: relative;
+}
+
+.rounded-image {
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  width: 100%;
+  height: auto;
+}
+
+.image-caption {
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 8px;
+  border-radius: 0 0 10px 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+}
+
+.location-indicator {
+  display: flex;
+  align-items: center;
+  color: var(--primary-color);
+  margin-top: 1rem;
+}
+
+.location-indicator i {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+/* Mission & Vision Section */
+.mission-vision {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 300px;
+  background: var(--background-white);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: var(--box-shadow);
+  transition: transform 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.vision-card {
+  background: linear-gradient(135deg, #f9f9f9, #e9f7ef);
+  border-left: 4px solid var(--primary-color);
+}
+
+.mission-card {
+  background: linear-gradient(135deg, #f9f9f9, #e9f0f7);
+  border-left: 4px solid var(--secondary-color);
+}
+
+.card-icon {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+/* Projects Section */
+.projects-list h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+  margin-top: 2rem;
+}
+
+.project-item {
+  background: var(--background-light);
+  border-radius: 10px;
+  padding: 25px;
+  transition: transform 0.3s;
+  text-align: center;
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--box-shadow);
+}
+
+.project-icon {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #e9f7ef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.project-icon i {
+  font-size: 24px;
+  color: var(--primary-color);
+}
+
+.project-item h4 {
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+/* Stats Section */
+.stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 3rem 0;
+  background-color: var(--primary-color-light);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.stat-item {
+  text-align: center;
+  width: 200px;
+  margin-bottom: 30px;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: rgba(255,255,255,0.9);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+.stat-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-size: 20px;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+
+.stat-text {
+  color: var(--text-light);
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.stat-progress {
+  width: 100%;
+  height: 4px;
+  background: #eee;
+  margin-top: 10px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background: var(--secondary-color);
+  transition: width 1.5s ease-in-out;
+}
+
+/* Why Choose Us / Highlights Section */
+.why-choose-us h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+}
+
+.highlights-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 60px;
+  margin-top: 2rem;
+}
+
+.highlight-cards {
+  flex: 3;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.highlight-card {
+  background: var(--background-light);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: var(--box-shadow);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-left: 4rem;
+}
+
+.highlight-card:hover {
+  transform: translateX(5px);
+}
+
+.highlight-icon {
+  position: absolute;
+  left: 1rem;
+  top: 1.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e9f7ef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.highlight-icon i {
+  font-size: 18px;
+  color: var(--primary-color);
+}
+
+.highlight-card h4 {
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.highlights-image {
+  flex: 2;
+  min-width: 300px;
+}
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+}
+
+/* CTA Section */
+.cta-join {
+  margin-top: 4rem;
+  background: linear-gradient(135deg, var(--primary-color-light), #e9f7ef);
+  padding: 3rem;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.waves-svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  opacity: 0.3;
+}
+
+.cta-graphic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.cta-content p {
+  margin-bottom: 25px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.btn-cta:hover {
+  background-color: var(--primary-color-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.btn-cta i {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.btn-cta:hover i {
+  transform: translateX(3px);
+}
+
+/* Our History Section */
+#our-history {
+  background-color: var(--background-light);
+  padding: 80px 0;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: var(--secondary-color);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  width: 50%;
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -12px;
+  background-color: var(--primary-color);
+  border: 4px solid var(--secondary-color);
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+.right::after {
+  left: -12px;
+}
+
+.timeline-content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+}
+
+.timeline-year {
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+/* Our Team Section */
+#our-team {
+  padding: 80px 0;
+}
+
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.team-member {
+  background: var(--background-white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  transition: transform 0.3s;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+}
+
+.member-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.member-info {
+  padding: 20px;
+}
+
+.member-name {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: var(--primary-color);
+}
+
+.member-role {
+  color: var(--secondary-color);
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.member-bio {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 15px;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--background-light);
+  color: var(--primary-color);
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.social-link:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* Partners Section */
+#partners {
+  background-color: var(--background-light);
+  padding: 80px 0;
+}
+
+.partner-types {
+  margin-bottom: 40px;
+}
+
+.partner-type-title {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.partner-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: var(--box-shadow);
+  transition: transform 0.3s;
+}
+
+.partner-card:hover {
+  transform: translateY(-5px);
+}
+
+.partner-logo {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin: 0 auto 15px;
+}
+
+.partner-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--primary-color);
+}
+
+.partner-type {
+  font-style: italic;
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+
+.partnership-cta {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.partnership-cta h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .about-intro,
+  .mission-vision,
+  .highlights-container {
+    flex-direction: column;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .cta-join {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline::after {
+    left: 31px;
+  }
+  
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  
+  .timeline-item::after {
+    left: 18px;
+  }
+  
+  .left::after, .right::after {
+    left: 18px;
+  }
+  
+  .right {
+    left: 0%;
+  }
+}
+
+@media (max-width: 576px) {
+  .stats-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .project-item {
+    padding: 1rem;
+  }
+  
+  .image-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <h1>GlobeGivers</h1>
+            </div>
+
+            <div class="hamburger">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">About Us</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="our-history.html" class="dropdown-item">Our History</a></li>
+                        <li><a href="mission-vision.html" class="dropdown-item">Mission & Vision</a></li>
+                        <li><a href="our-team.html" class="dropdown-item">Our Team</a></li>
+                        <li><a href="partners.html" class="dropdown-item">Partners</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Programs & Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="programs.html" class="dropdown-item">Education Support</a></li>
+                        <li><a href="#" class="dropdown-item">Community Health</a></li>
+                        <li><a href="#" class="dropdown-item">Environmental Projects</a></li>
+                        <li><a href="#" class="dropdown-item">Youth Development</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Get Involved</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="dropdown-item">Volunteer</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
+                <li class="nav-item"><a href="#" class="cta-btn">Donate</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+<!-- About Section -->
+
+    <!-- About Section -->
+    <section class="about section-padding" style="background-color: var(--background-white);">
+        <div class="container">
+            <!-- Header with Island Illustration -->
+            <div class="about-header">
+                <h2 class="section-title">About GlobeGivers</h2>
+                <div class="island-graphic">
+                    <svg viewBox="0 0 400 100" class="island-svg">
+                        <path d="M50,80 Q125,40 200,70 Q275,100 350,75" fill="none" stroke="#2E8B57" stroke-width="3"/>
+                        <circle cx="150" cy="60" r="20" fill="#2E8B57" />
+                        <circle cx="190" cy="65" r="15" fill="#2E8B57" />
+                        <circle cx="230" cy="68" r="18" fill="#2E8B57" />
+                        <path d="M120,60 L130,40 L140,60" fill="#2E8B57" stroke="#2E8B57" stroke-width="1"/>
+                        <path d="M220,68 L225,48 L235,68" fill="#2E8B57" stroke="#2E8B57" stroke-width="1"/>
+                        <path d="M240,68 L250,48 L260,68" fill="#2E8B57" stroke="#2E8B57" stroke-width="1"/>
+                        <ellipse cx="200" cy="90" rx="180" ry="10" fill="#1E90FF" opacity="0.5"/>
+                    </svg>
+                </div>
+            </div>
+      
+            <!-- Introduction with image -->
+            <div class="about-intro">
+                <div class="intro-content">
+                    <p class="about-description">
+                        Welcome to Mfangano Island, a hidden gem on Lake Victoria, Kenya. We are a community-driven initiative dedicated to sustainable development, cultural preservation, and eco-tourism.
+                    </p>
+                    <div class="location-indicator">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Lake Victoria, Kenya</span>
+                    </div>
+                </div>
+                <div class="intro-image">
+                    <img src="images/img1.jpg" alt="Mfangano Island aerial view" class="rounded-image"/>
+                    <div class="image-caption">Breathtaking view of Mfangano Island</div>
+                </div>
+            </div>
+      
+            <!-- Mission & Vision Cards -->
+            <div class="mission-vision" id="mission-vision">
+                <div class="card vision-card">
+                    <div class="card-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>
+                        To build a self-sustaining community where education, healthcare, organic farming, and tourism thrive while preserving our natural and cultural heritage.
+                    </p>
+                </div>
+                <div class="card mission-card">
+                    <div class="card-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>
+                        We strive to improve life on Mfangano Island through education, healthcare, clean water, agriculture, empowerment, and tourism initiatives.
+                    </p>
+                </div>
+            </div>
+      
+            <!-- What We Do - With Icons -->
+            <div class="projects-list">
+                <h3>What We Do</h3>
+                <div class="projects-grid">
+                    <div class="project-item">
+                        <div class="project-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4>Education</h4>
+                        <p>Supporting schools and vulnerable children with resources and infrastructure.</p>
+                    </div>
+                    <div class="project-item">
+                        <div class="project-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h4>Healthcare</h4>
+                        <p>Expanding access via Wakinga Health Center and mobile clinics.</p>
+                    </div>
+                    <div class="project-item">
+                        <div class="project-icon">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <h4>Clean Water</h4>
+                        <p>Reducing waterborne disease through sustainable water projects.</p>
+                    </div>
+                    <div class="project-item">
+                        <div class="project-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h4>Sustainable Farming</h4>
+                        <p>Promoting organic, permaculture practices for food security.</p>
+                    </div>
+                    <div class="project-item">
+                        <div class="project-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h4>Empowerment</h4>
+                        <p>Training and microfinance for women & youth entrepreneurs.</p>
+                    </div>
+                    <div class="project-item">
+                        <div class="project-icon">
+                            <i class="fas fa-hiking"></i>
+                        </div>
+                        <h4>Eco-Tourism</h4>
+                        <p>Showcasing our cultural and natural treasures sustainably.</p>
+                    </div>
+                </div>
+            </div>
+      
+            <!-- Interactive Stats -->
+            <div class="stats-container">
+                <div class="stat-item people">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number" data-count="15000">0</div>
+                    <p class="stat-text">People Reached</p>
+                    <div class="stat-progress"><div class="progress-bar"></div></div>
+                </div>
+                <div class="stat-item communities">
+                    <div class="stat-icon">
+                        <i class="fas fa-globe-africa"></i>
+                    </div>
+                    <div class="stat-number" data-count="120">0</div>
+                    <p class="stat-text">Communities Served</p>
+                    <div class="stat-progress"><div class="progress-bar"></div></div>
+                </div>
+                <div class="stat-item volunteers">
+                    <div class="stat-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <div class="stat-number" data-count="250">0</div>
+                    <p class="stat-text">Active Volunteers</p>
+                    <div class="stat-progress"><div class="progress-bar"></div></div>
+                </div>
+                <div class="stat-item projects">
+                    <div class="stat-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="stat-number" data-count="50">0</div>
+                    <p class="stat-text">Ongoing Projects</p>
+                    <div class="stat-progress"><div class="progress-bar"></div></div>
+                </div>
+            </div>
+      
+            <!-- Why Choose Us - With Image -->
+            <div class="why-choose-us">
+                <h3>Why Choose Us?</h3>
+                <div class="highlights-container">
+                    <div class="highlight-cards">
+                        <div class="highlight-card">
+                            <div class="highlight-icon">
+                                <i class="fas fa-drum"></i>
+                            </div>
+                            <h4>Authentic Cultural Experience</h4>
+                            <p>Explore ancient shrines, rock art, and immerse yourself in traditional storytelling and music.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">
+                                <i class="fas fa-mountain"></i>
+                            </div>
+                            <h4>Breathtaking Nature & Adventure</h4>
+                            <p>Hike Soklo Plateau, spot rare birds, and enjoy the pristine beauty of Lake Victoria's shores.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">
+                                <i class="fas fa-hand-holding-heart"></i>
+                            </div>
+                            <h4>Meaningful Volunteering & Investment</h4>
+                            <p>Support impactful community projects and experience the authentic island life while making a difference.</p>
+                        </div>
+                    </div>
+                    <div class="highlights-image">
+                        <div class="image-gallery">
+                            <img src="images/img1.jpg" alt="Cultural experience" class="gallery-img"/>
+                            <img src="images/img1.jpg" alt="Island nature" class="gallery-img"/>
+                            <img src="images/img1.jpg" alt="Community volunteering" class="gallery-img"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      
+            <!-- CTA with Graphic -->
+            <div class="cta-join">
+                <div class="cta-graphic">
+                    <svg viewBox="0 0 100 50" class="waves-svg">
+                        <path d="M0,25 Q25,10 50,25 T100,25" fill="none" stroke="#1E90FF" stroke-width="2"/>
+                        <path d="M0,25 Q25,40 50,25 T100,25" fill="none" stroke="#1E90FF" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="cta-content">
+                    <h3>Join Our Journey</h3>
+                    <p>Join us in making a difference. Whether you're an investor, volunteer, or traveler — Mfangano welcomes you!</p>
+                    <a href="#contact" class="btn-cta">Get Involved <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our History Section -->
+    <section id="our-history" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Our History</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2010</div>
+                        <h3>The Beginning</h3>
+                        <p>GlobeGivers was founded by local community members and international volunteers with a shared vision of sustainable development on Mfangano Island.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2012</div>
+                        <h3>First Community Project</h3>
+                        <p>We launched our first clean water initiative, installing rainwater harvesting systems in three villages, reducing waterborne diseases by 40%.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2015</div>
+                        <h3>Healthcare Expansion</h3>
+                        <p>Established the Wakinga Health Center, providing basic healthcare services to over 5,000 residents who previously had no medical access.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2017</div>
+                        <h3>Education Initiative</h3>
+                        <p>Launched our school support program, renovating six primary schools and providing scholarships to 150 vulnerable children.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2019</div>
+                        <h3>Eco-Tourism Launch</h3>
+                        <p>Developed our first eco-friendly tourist accommodations and cultural tour packages, creating jobs for 25 local guides and hospitality workers.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2022</div>
+                        <h3>Sustainable Agriculture</h3>
+                        <p>Established our permaculture demonstration farm, training over 500 farmers in organic farming techniques adapted to the island's unique ecosystem.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2024</div>
+                        <h3>International Recognition</h3>
+                        <p>Received the Sustainable Community Development Award from the United Nations for our integrated approach to community development and environmental conservation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ <!-- Our Team Section -->
+<section id="our-team" class="section-padding">
+    <div class="container">
+        <h2 class="section-title">Our Team</h2>
+        <p class="text-center" style="max-width: 800px; margin: 0 auto 40px;">Our dedicated team brings together local knowledge, international expertise, and passionate commitment to sustainable development on Mfangano Island.</p>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="images/img1.jpg" alt="James Omondi" class="member-img">
+                <div class="member-info">
+                    <h3 class="member-name">James Omondi</h3>
+                    <p class="member-role">Founder & Executive Director</p>
+                    <p class="member-bio">Born and raised on Mfangano Island, James combines traditional knowledge with his Master's in Sustainable Development to lead our organization's vision.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="images/img1.jpg" alt="Sarah Njeri" class="member-img">
+                <div class="member-info">
+                    <h3 class="member-name">Sarah Njeri</h3>
+                    <p class="member-role">Healthcare Program Director</p>
+                    <p class="member-bio">A registered nurse with 15 years of experience, Sarah oversees our healthcare initiatives and community health education programs.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="images/img1.jpg" alt="David Otieno" class="member-img">
+                <div class="member-info">
+                    <h3 class="member-name">David Otieno</h3>
+                    <p class="member-role">Environmental Conservation Manager</p>
+                    <p class="member-bio">With a background in marine biology, David leads our lake conservation efforts and sustainable fishing initiatives to protect Mfangano's natural resources.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="images/img1.jpg" alt="Grace Achieng" class="member-img">
+                <div class="member-info">
+                    <h3 class="member-name">Grace Achieng</h3>
+                    <p class="member-role">Education Program Coordinator</p>
+                    <p class="member-bio">A former teacher with passion for community development, Grace manages our scholarship programs and educational initiatives for island youth.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+     <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>Community Works</h3>
+                    <p>
+                        Building stronger communities through sustainable development, education, health, and environmental initiatives.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="programs.html">Programs & Services</a></li>
+                        <li><a href="#">Get Involved</a></li>
+                        <li><a href="#">News & Events</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li>123 Community Lane</li>
+                        <li>Cityville, ST 12345</li>
+                        <li>Phone: (123) 456-7890</li>
+                        <li>Email: info@communityworks.org</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 GlobeGivers. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer> 
+  <!-- JavaScript for Animations -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Animate stats counter
+    const animateStats = () => {
+      const statElements = document.querySelectorAll('.stat-number');
+      const progressBars = document.querySelectorAll('.progress-bar');
+      
+      if (isElementInViewport(statElements[0])) {
+        statElements.forEach((stat, index) => {
+          const target = parseInt(stat.getAttribute('data-count'));
+          const duration = 2000; // 2 seconds
+          
+          // Animate counter
+          let start = 0;
+          const increment = target / (duration / 16);
+          
+          const timer = setInterval(() => {
+            start += increment;
+            stat.textContent = Math.floor(start);
+            
+            if (start >= target) {
+              stat.textContent = target.toLocaleString();
+              clearInterval(timer);
+            }
+          }, 16);
+          
+          // Animate progress bar
+          progressBars[index].style.width = '100%';
+        });
+        
+        // Remove scroll listener once animation is triggered
+        window.removeEventListener('scroll', animateStats);
+      }
+    };
+    
+    // Check if element is in viewport
+    function isElementInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+    
+    // Add scroll event listener
+    window.addEventListener('scroll', animateStats);
+    
+    // Initial check on page load
+    animateStats();
+  });
+  </script>
+    <!-- Footer -->
+
+    <script src="script.js"></script>
+</body>
+</html>

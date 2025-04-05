@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlobeGivers | Making a Difference Together</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style> /* Form Styles */
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ff6347;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        form button:hover {
+            background-color: #ff4500;
+        }
+        .section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.section p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.section li {
+    margin-bottom: 10px;
+}
+
+.section .cta-btn {
+    margin-top: 20px;
+}
+        </style>
+</head>
+<body>
+<!-- Header -->
+<header>
+    <div class="container nav-container">
+        <div class="logo">
+            <h1>GlobeGivers</h1>
+        </div>
+
+        <div class="hamburger">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </div>
+
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link">About Us</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" class="dropdown-item">Our History</a></li>
+                    <li><a href="#" class="dropdown-item">Mission & Vision</a></li>
+                    <li><a href="#" class="dropdown-item">Our Team</a></li>
+                    <li><a href="#" class="dropdown-item">Partners</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link">Programs & Services</a>
+                <ul class="dropdown-menu">
+                    <li><a href="programs.html" class="dropdown-item">Education Support</a></li>
+                    <li><a href="#" class="dropdown-item">Community Health</a></li>
+                    <li><a href="#" class="dropdown-item">Environmental Projects</a></li>
+                    <li><a href="#" class="dropdown-item">Youth Development</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link">Get Involved</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#volunteer" class="dropdown-item">Volunteer</a></li>
+                    <li><a href="#donate" class="dropdown-item">Donate</a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link">Gallery</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link">Contact Us</a></li>
+            <li class="nav-item"><a href="#donate" class="cta-btn">Donate</a></li>
+        </ul>
+    </div>
+</header>
+
+<!-- Main Content -->
+<main>
+    <section id="volunteer" class="section">
+        <div class="container">
+            <h2>How to Volunteer</h2>
+            <p>Volunteering with GlobeGivers is a rewarding way to make a difference in the world. Here’s how you can get involved:</p>
+            <ul>
+                <li><strong>Step 1:</strong> Choose a Program - Select a program that aligns with your skills and interests.</li>
+                <li><strong>Step 2:</strong> Apply - Send an email to <a href="mailto:volunteer@globegivers.com">volunteer@globegivers.com</a> with your name, contact information, and the program you are interested in.</li>
+                <li><strong>Step 3:</strong> Interview - We will contact you to discuss your application and how you can contribute.</li>
+                <li><strong>Step 4:</strong> Training - Attend a training session to prepare for your role.</li>
+                <li><strong>Step 5:</strong> Get Started - Begin making a positive impact in your chosen program.</li>
+            </ul>
+            <a href="mailto:volunteer@globegivers.com" class="cta-btn">Apply Now</a>
+        </div>
+    </section>
+
+    <section id="donate" class="section">
+        <div class="container">
+            <h2>Donate</h2>
+            <p>Your support is crucial to our mission. Every donation, no matter the size, makes a difference. Here’s how you can donate:</p>
+            <ul>
+                <li><strong>Online Donation:</strong> <a href="https://example.com/donate" target="_blank">Click here</a> to make a secure online donation.</li>
+                <li><strong>Mail-in Donation:</strong> Send a check or money order to our address: 123 Community Street, Nairobi, Kenya.</li>
+                <li><strong>Phone Donation:</strong> Call us at +254701432825 to make a donation over the phone.</li>
+            </ul>
+            <a href="https://example.com/donate" target="_blank" class="cta-btn">Donate Now</a>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>We would love to hear from you! Whether you have a question, want to get involved, or need more information, please reach out using the details below:</p>
+            <ul>
+                <li><strong>Phone:</strong> +254701432825</li>
+                <li><strong>Email:</strong> <a href="mailto:Info@globegivers.com">Info@globegivers.com</a></li>
+                <li><strong>Address:</strong> 123 Community Street, Nairobi, Kenya</li>
+            </ul>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit" class="cta-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Community Works</h3>
+                <p>
+                    Building stronger communities through sustainable development, education, health, and environmental initiatives.
+                </p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61574922598829" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/GiversGlobe?t=nL_sq6ZDGML9ISwHflJtBQ&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/globegivers?igsh=b3k2cm12b3JtMWc1" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/globe-givers-03aa0a359?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/@GlobeGivers" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>    
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Programs & Services</a></li>
+                    <li><a href="#">Get Involved</a></li>
+                    <li><a href="#">News & Events</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <ul class="footer-links">
+                    <li>Phone: +254701432825</li>
+                    <li>Email: <a href="mailto:Info@globegivers.com">Info@globegivers.com</a></li>
+                    <li>Address: 123 Community Street, Nairobi, Kenya</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 GlobeGivers. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

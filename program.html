@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GlobeGivers | Making a Difference Together</title>
+       <link rel="stylesheet" href="styles.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <style>
+      /* Program Details Page Styles */
+
+/* Program Header */
+.program-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #14e247;
+}
+
+.program-header h1 {
+    font-size: 2.5rem;
+    color: #12cf5e;
+    margin: 0;
+}
+
+.btn-back {
+    padding: 0.5rem 1rem;
+    background-color: #ab97da;
+    color: #444;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+    background-color: #e0e0e0;
+}
+
+/* Program Content */
+.program-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.program-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.program-description p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+/* Program Stats */
+.program-stats {
+    display: flex;
+    margin: 2rem 0;
+    gap: 2rem;
+}
+
+.stat {
+    text-align: center;
+    flex: 1;
+    padding: 1.5rem;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2a7d40;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Program Goals */
+.program-goals {
+    margin: 2rem 0;
+}
+
+.program-goals h3 {
+    font-size: 1.5rem;
+    color: #2a7d40;
+    margin-bottom: 1rem;
+}
+
+.program-goals ul {
+    padding-left: 1.5rem;
+}
+
+.program-goals li {
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* Gallery */
+.program-gallery {
+    margin-bottom: 3rem;
+}
+
+.program-gallery h3 {
+    font-size: 1.5rem;
+    color: #2a7d40;
+    margin-bottom: 1.5rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Get Involved */
+.get-involved {
+    background-color: #f8f8f8;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.get-involved h3 {
+    font-size: 1.5rem;
+    color: #2a7d40;
+    margin-bottom: 1rem;
+}
+
+.get-involved p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.involvement-options {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #2a7d40;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #236835;
+}
+
+.btn-secondary {
+    background-color: #f5f5f5;
+    color: #2a7d40;
+    border: 1px solid #2a7d40;
+}
+
+.btn-secondary:hover {
+    background-color: #e0e0e0;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .program-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .program-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .program-stats {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+    </style>
+    <body>
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <h1>GlobeGivers</h1>
+            </div>
+
+            <div class="hamburger">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">About Us</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="dropdown-item">Our History</a></li>
+                        <li><a href="#" class="dropdown-item">Mission & Vision</a></li>
+                        <li><a href="#" class="dropdown-item">Our Team</a></li>
+                        <li><a href="#" class="dropdown-item">Partners</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Programs & Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="programs.html" class="dropdown-item">Education Support</a></li>
+                        <li><a href="#" class="dropdown-item">Community Health</a></li>
+                        <li><a href="#" class="dropdown-item">Environmental Projects</a></li>
+                        <li><a href="#" class="dropdown-item">Youth Development</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Get Involved</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="dropdown-item">Volunteer</a></li>
+                        
+                    </ul>
+                </li>
+               
+                <li class="nav-item"><a href="#" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
+                <li class="nav-item"><a href="#" class="cta-btn">Donate</a></li>
+            </ul>
+        </div>
+    </header>
+    <body>
+      <!-- Header & Nav will go here (same as index.html) -->
+  
+      <!-- Program Details Section -->
+      <section class="program-details">
+          <div class="container">
+              <div class="program-header">
+                  <h1 id="program-title">Program Title</h1>
+                  <a href="index.html#programs" class="btn btn-back">Back to Programs</a>
+              </div>
+              
+              <div class="program-content">
+                  <div class="program-image">
+                      <img id="program-image" src="" alt="Program Image">
+                  </div>
+                  
+                  <div class="program-description">
+                      <div id="program-description-content">
+                          <!-- Program description will be loaded here -->
+                      </div>
+  
+                      <div class="program-stats">
+                          <div class="stat">
+                              <span class="stat-number" id="people-helped">0</span>
+                              <span class="stat-label">People Helped</span>
+                          </div>
+                          <div class="stat">
+                              <span class="stat-number" id="year-started">2020</span>
+                              <span class="stat-label">Year Started</span>
+                          </div>
+                      </div>
+  
+                      <div class="program-goals">
+                          <h3>Program Goals</h3>
+                          <ul id="program-goals-list">
+                              <!-- Goals will be loaded here -->
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="program-gallery">
+                  <h3>Project Gallery</h3>
+                  <div class="gallery-grid" id="gallery-container">
+                      <!-- Gallery images will be loaded here -->
+                  </div>
+              </div>
+              
+              <div class="get-involved">
+                  <h3>Get Involved</h3>
+                  <p>Want to support this program? Here's how you can help:</p>
+                  <div class="involvement-options">
+                      <a href="#" class="btn btn-primary">Donate</a>
+                      <a href="#" class="btn btn-secondary">Volunteer</a>
+                      <a href="#" class="btn btn-secondary">Learn More</a>
+                  </div>
+              </div>
+          </div>
+      </section>
+  
+      <!-- Footer will go here (same as index.html) -->
+    <footer> 
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>Community Works</h3>
+                    <p>
+                        Building stronger communities through sustainable development, education, health, and environmental initiatives.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61574922598829" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/GiversGlobe?t=nL_sq6ZDGML9ISwHflJtBQ&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/globegivers?igsh=b3k2cm12b3JtMWc1" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/globe-givers-03aa0a359?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.youtube.com/@GlobeGivers" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>    
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Programs & Services</a></li>
+                        <li><a href="#">Get Involved</a></li>
+                        <li><a href="#">News & Events</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li>Phone: +254701432825</li>
+                        <li>Email: <a href="mailto:Info@globegivers.com">Info@globegivers.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 GlobeGivers. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+   
+  </body>
+    <script src="program.js"></script> 
+    <script src="script.js"></script>  
+     
+</body>
+</html>
