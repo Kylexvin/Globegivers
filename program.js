@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <p>We are expanding the center to offer better maternal care and emergency treatment, while also training community health workers to extend services to remote areas of the island.</p>
             `,
             peopleHelped: '3,500+',
-            yearStarted: 2016,
+            yearStarted: 2020,
             goals: [
                 'Complete expansion of Wakinga Health Center by end of 2025',
                 'Train 25 community health workers for remote village service',
