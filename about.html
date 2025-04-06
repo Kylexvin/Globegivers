@@ -411,7 +411,7 @@
 
 /* Our History Section */
 #our-history {
-  background-color: var(--background-light);
+  background-color: #b4e2c6;
   padding: 80px 0;
 }
 
@@ -479,77 +479,76 @@
 }
 
 /* Our Team Section */
+
 #our-team {
-  padding: 80px 0;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #f8f9fa; /* Light background for the section */
 }
 
-.team-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 30px;
-  margin-top: 50px;
+#our-team .section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
-.team-member {
-  background: var(--background-white);
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: var(--box-shadow);
-  transition: transform 0.3s;
+#our-team .text-center {
+  text-align: center;
 }
 
-.team-member:hover {
-  transform: translateY(-10px);
+#our-team p {
+  color: #6c757d;
 }
 
-.member-img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-}
-
-.member-info {
+#our-team .team-member {
+  background-color: white;
+  border-radius: 15px;
   padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 20px;
 }
 
-.member-name {
-  font-size: 1.2rem;
-  margin-bottom: 5px;
-  color: var(--primary-color);
+#our-team .team-member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  
 }
 
-.member-role {
-  color: var(--secondary-color);
-  font-style: italic;
-  margin-bottom: 10px;
-}
-
-.member-bio {
-  font-size: 0.9rem;
-  color: var(--text-light);
+#our-team .member-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
   margin-bottom: 15px;
 }
 
-.social-links {
-  display: flex;
-  gap: 10px;
+#our-team .member-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
 }
 
-.social-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  background: var(--background-light);
-  color: var(--primary-color);
-  border-radius: 50%;
-  transition: all 0.3s;
+#our-team .member-role {
+  font-size: 1rem;
+  color: #6c757d;
+  font-weight: 500;
 }
 
-.social-link:hover {
-  background: var(--primary-color);
-  color: white;
+#our-team .member-bio {
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+@media (max-width: 767px) {
+  #our-team .team-member {
+    padding: 15px;
+  }
+
+  #our-team .member-img {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 /* Partners Section */
@@ -678,53 +677,54 @@
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <div class="container nav-container">
-            <div class="logo">
+    <header class="gg-header">
+        <div class="gg-container gg-nav-container">
+            <div class="gg-logo">
                 <h1>GlobeGivers</h1>
             </div>
-
-            <div class="hamburger">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </div>
-
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link">About Us</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="our-history.html" class="dropdown-item">Our History</a></li>
-                        <li><a href="mission-vision.html" class="dropdown-item">Mission & Vision</a></li>
-                        <li><a href="our-team.html" class="dropdown-item">Our Team</a></li>
-                        <li><a href="partners.html" class="dropdown-item">Partners</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link">Programs & Services</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="programs.html" class="dropdown-item">Education Support</a></li>
-                        <li><a href="#" class="dropdown-item">Community Health</a></li>
-                        <li><a href="#" class="dropdown-item">Environmental Projects</a></li>
-                        <li><a href="#" class="dropdown-item">Youth Development</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link">Get Involved</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#" class="dropdown-item">Volunteer</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a href="#" class="nav-link">Gallery</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
-                <li class="nav-item"><a href="#" class="cta-btn">Donate</a></li>
-            </ul>
+    
+            <button class="gg-hamburger" aria-label="Toggle navigation menu">
+                <span class="gg-hamburger-line"></span>
+                <span class="gg-hamburger-line"></span>
+                <span class="gg-hamburger-line"></span>
+            </button>
+    
+            <nav class="gg-nav">
+                <ul class="gg-nav-menu">
+                    <li class="gg-nav-item"><a href="index.html" class="gg-nav-link gg-active">Home</a></li>
+                    <li class="gg-nav-item gg-dropdown">
+                        <a href="#" class="gg-nav-link gg-dropdown-toggle">About Us <span class="gg-dropdown-icon">▼</span></a>
+                        <ul class="gg-dropdown-menu">
+                            <li><a href="about.html#our-history" class="gg-dropdown-item">Our History</a></li>
+                            <li><a href="about.html#mission-vision" class="gg-dropdown-item">Mission & Vision</a></li>
+                            <li><a href="about.html#our-team" class="gg-dropdown-item">Our Team</a></li>
+                            <li><a href="about.html#our-team" class="gg-dropdown-item">Partners</a></li>
+                        </ul>
+                    </li>
+                    <li class="gg-nav-item gg-dropdown">
+                        <a href="#" class="gg-nav-link gg-dropdown-toggle">Programs & Services <span class="gg-dropdown-icon">▼</span></a>
+                        <ul class="gg-dropdown-menu">
+                            <li><a href="program.html?id=agriculture" class="gg-dropdown-item">Agriculture</a></li>
+                            <li><a href="program.html?id=women-youth" class="gg-dropdown-item">women-youth programs</a></li>
+                            <li><a href="program.html?id=water" class="gg-dropdown-item">Water Projects</a></li>
+                            <li><a href="program.html?id=healthcare" class="gg-dropdown-item">Community Health</a></li>
+                            <li><a href="program.html?id=infrastructure" class="gg-dropdown-item">Community infrastructure</a></li>
+                        </ul>
+                    </li>
+                    <li class="gg-nav-item gg-dropdown">
+                        <a href="#" class="gg-nav-link gg-dropdown-toggle">Get Involved <span class="gg-dropdown-icon">▼</span></a>
+                        <ul class="gg-dropdown-menu">
+                            <li><a href="contact.html#volunteer" class="gg-dropdown-item">Volunteer</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="gg-nav-item"><a href="contact.html" class="gg-nav-link">Contact Us</a></li>
+                    <li class="gg-nav-item"><a href="https://www.mchanga.africa/fundraiser/113643" class="gg-cta-btn">Donate</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-
-<!-- About Section -->
 
     <!-- About Section -->
     <section class="about section-padding" style="background-color: var(--background-white);">
@@ -732,18 +732,7 @@
             <!-- Header with Island Illustration -->
             <div class="about-header">
                 <h2 class="section-title">About GlobeGivers</h2>
-                <!-- <div class="island-graphic">
-                    <svg viewBox="0 0 400 100" class="island-svg">
-                        <path d="M50,80 Q125,40 200,70 Q275,100 350,75" fill="none" stroke="#2E8B57" stroke-width="3"/>
-                        <circle cx="150" cy="60" r="20" fill="#2E8B57" />
-                        <circle cx="190" cy="65" r="15" fill="#2E8B57" />
-                        <circle cx="230" cy="68" r="18" fill="#2E8B57" />
-                        <path d="M120,60 L130,40 L140,60" fill="#2E8B57" stroke="#2E8B57" stroke-width="1"/>
-                        <path d="M220,68 L225,48 L235,68" fill="#2E8B57" stroke="#2E8B57" stroke-width="1"/>
-                        <path d="M240,68 L250,48 L260,68" fill="#2E8B57" stroke="#2E8B57" stroke-width="1"/>
-                        <ellipse cx="200" cy="90" rx="180" ry="10" fill="#1E90FF" opacity="0.5"/>
-                    </svg>
-                </div> -->
+               
             </div>
       
             <!-- Introduction with image -->
@@ -918,170 +907,159 @@
                 <div class="cta-content">
                     <h3>Join Our Journey</h3>
                     <p>Join us in making a difference. Whether you're an investor, volunteer, or traveler — Mfangano welcomes you!</p>
-                    <a href="#contact" class="btn-cta">Get Involved <i class="fas fa-arrow-right"></i></a>
+                    <a href="contact.html" class="btn-cta">Get Involved <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Our History Section -->
-    <section id="our-history" class="section-padding">
-        <div class="container">
-            <h2 class="section-title">Our History</h2>
-            <div class="timeline">
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <div class="timeline-year">2010</div>
-                        <h3>The Beginning</h3>
-                        <p>GlobeGivers was founded by local community members and international volunteers with a shared vision of sustainable development on Mfangano Island.</p>
-                    </div>
-                </div>
-                <div class="timeline-item right">
-                    <div class="timeline-content">
-                        <div class="timeline-year">2012</div>
-                        <h3>First Community Project</h3>
-                        <p>We launched our first clean water initiative, installing rainwater harvesting systems in three villages, reducing waterborne diseases by 40%.</p>
-                    </div>
-                </div>
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <div class="timeline-year">2015</div>
-                        <h3>Healthcare Expansion</h3>
-                        <p>Established the Wakinga Health Center, providing basic healthcare services to over 5,000 residents who previously had no medical access.</p>
-                    </div>
-                </div>
-                <div class="timeline-item right">
-                    <div class="timeline-content">
-                        <div class="timeline-year">2017</div>
-                        <h3>Education Initiative</h3>
-                        <p>Launched our school support program, renovating six primary schools and providing scholarships to 150 vulnerable children.</p>
-                    </div>
-                </div>
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <div class="timeline-year">2019</div>
-                        <h3>Eco-Tourism Launch</h3>
-                        <p>Developed our first eco-friendly tourist accommodations and cultural tour packages, creating jobs for 25 local guides and hospitality workers.</p>
-                    </div>
-                </div>
-                <div class="timeline-item right">
-                    <div class="timeline-content">
-                        <div class="timeline-year">2022</div>
-                        <h3>Sustainable Agriculture</h3>
-                        <p>Established our permaculture demonstration farm, training over 500 farmers in organic farming techniques adapted to the island's unique ecosystem.</p>
-                    </div>
-                </div>
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <div class="timeline-year">2024</div>
-                        <h3>International Recognition</h3>
-                        <p>Received the Sustainable Community Development Award from the United Nations for our integrated approach to community development and environmental conservation.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
- <!-- Our Team Section -->
-<section id="our-team" class="section-padding">
+<!-- Our History Section -->
+<section id="our-history" class="section-padding">
     <div class="container">
-        <h2 class="section-title">Our Team</h2>
-        <p class="text-center" style="max-width: 800px; margin: 0 auto 40px;">Our dedicated team brings together local knowledge, international expertise, and passionate commitment to sustainable development on Mfangano Island.</p>
-        <div class="team-container">
-            <div class="team-member">
-                <img src="images/img1.jpg" alt="James Omondi" class="member-img">
-                <div class="member-info">
-                    <h3 class="member-name">James Omondi</h3>
-                    <p class="member-role">Founder & Executive Director</p>
-                    <p class="member-bio">Born and raised on Mfangano Island, James combines traditional knowledge with his Master's in Sustainable Development to lead our organization's vision.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
-                    </div>
+        <h2 class="section-title">Our History</h2>
+        <div class="timeline">
+
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <div class="timeline-year">The Beginning</div>
+                    <h3>Founding Inspiration</h3>
+                    <p>GlobeGivers was founded by a group of local community members from Mfangano Island and dedicated international volunteers with a shared vision of sustainable development. The initiative was inspired by Gabriel Lennox, a passionate local, and Susan Hecklman, a volunteer from Germany. Their collaboration sparked a movement focused on community empowerment, environmental conservation, and long-term growth.</p>
                 </div>
             </div>
-            <div class="team-member">
-                <img src="images/img1.jpg" alt="Sarah Njeri" class="member-img">
-                <div class="member-info">
-                    <h3 class="member-name">Sarah Njeri</h3>
-                    <p class="member-role">Healthcare Program Director</p>
-                    <p class="member-bio">A registered nurse with 15 years of experience, Sarah oversees our healthcare initiatives and community health education programs.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
-                    </div>
+
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <div class="timeline-year">2018</div>
+                    <h3>First Community Project</h3>
+                    <p>We launched our first clean water initiative by installing rainwater harvesting systems in three villages. This significantly improved water access and reduced waterborne diseases by 40%, particularly benefiting the Wakinga community.</p>
                 </div>
             </div>
-            <div class="team-member">
-                <img src="images/img1.jpg" alt="David Otieno" class="member-img">
-                <div class="member-info">
-                    <h3 class="member-name">David Otieno</h3>
-                    <p class="member-role">Environmental Conservation Manager</p>
-                    <p class="member-bio">With a background in marine biology, David leads our lake conservation efforts and sustainable fishing initiatives to protect Mfangano's natural resources.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
-                    </div>
+
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <div class="timeline-year">2020</div>
+                    <h3>Healthcare Expansion</h3>
+                    <p>The Wakinga Health Center was established to serve over 5,000 residents with essential medical care. This milestone was achieved through a successful online fundraising campaign led by Dan Xia, a volunteer from the USA.</p>
                 </div>
             </div>
-            <div class="team-member">
-                <img src="images/img1.jpg" alt="Grace Achieng" class="member-img">
-                <div class="member-info">
-                    <h3 class="member-name">Grace Achieng</h3>
-                    <p class="member-role">Education Program Coordinator</p>
-                    <p class="member-bio">A former teacher with passion for community development, Grace manages our scholarship programs and educational initiatives for island youth.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
-                    </div>
+
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <div class="timeline-year">2021</div>
+                    <h3>Education Initiative</h3>
+                    <p>Our school support program renovated six primary schools and awarded scholarships to 150 vulnerable children. Samuel Odoyo, Director of the Mfangano Education Fund, led this impactful effort to uplift youth education.</p>
                 </div>
             </div>
+
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <div class="timeline-year">2022</div>
+                    <h3>Eco-Tourism Launch</h3>
+                    <p>We introduced eco-friendly accommodations and cultural tour packages that promoted sustainable tourism. This initiative created jobs for 25 locals and helped preserve Mfangano Island’s cultural identity.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <div class="timeline-year">2023</div>
+                    <h3>Sustainable Agriculture</h3>
+                    <p>Our permaculture demonstration farm trained over 500 farmers in organic farming tailored to the island’s environment. This has empowered communities to practice environmentally friendly agriculture.</p>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
-     <footer>
-        <div class="container">
-            <div class="footer-container">
-                <div class="footer-col">
-                    <h3>Community Works</h3>
-                    <p>
-                        Building stronger communities through sustainable development, education, health, and environmental initiatives.
-                    </p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="programs.html">Programs & Services</a></li>
-                        <li><a href="#">Get Involved</a></li>
-                        <li><a href="#">News & Events</a></li>
-                        <li><a href="#">Gallery</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Contact Us</h3>
-                    <ul class="footer-links">
-                        <li>123 Community Lane</li>
-                        <li>Cityville, ST 12345</li>
-                        <li>Phone: (123) 456-7890</li>
-                        <li>Email: info@communityworks.org</li>
-                    </ul>
-                </div>
+
+ <!-- Our Team Section -->
+<section id="our-team" class="section-padding bg-light">
+    <div class="container">
+      <h2 class="section-title text-center">Our Team</h2>
+      <p class="text-center mx-auto mb-5" style="max-width: 800px;">
+        Our dedicated team brings together local knowledge, international expertise, and passionate commitment to sustainable development on Mfangano Island.
+      </p>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-3">
+          <div class="team-member text-center p-3 bg-white rounded-4 shadow-sm h-100">
+            <img src="images/img1.jpg" alt="James Omondi" class="member-img rounded-circle mb-3" style="width: 120px; height: 120px; object-fit: cover;">
+            <h4 class="member-name">James Omondi</h4>
+            <p class="member-role text-muted fw-semibold">Founder & Executive Director</p>
+            <p class="member-bio small">Born and raised on Mfangano Island, James combines traditional knowledge with his Master's in Sustainable Development to lead our organization's vision.</p>
+          </div>
+        </div>
+  
+        <div class="col-md-6 col-lg-3">
+          <div class="team-member text-center p-3 bg-white rounded-4 shadow-sm h-100">
+            <img src="images/samuel.jpg" alt="Samuel Odoyo" class="member-img rounded-circle mb-3" style="width: 120px; height: 120px; object-fit: cover;">
+            <h4 class="member-name">Samuel Odoyo</h4>
+            <p class="member-role text-muted fw-semibold">Healthcare Program Director</p>
+            <p class="member-bio small">With extensive experience in health outreach, Samuel leads our community health initiatives and supports wellness efforts across Mfangano Island.</p>
+          </div>
+        </div>
+  
+        <div class="col-md-6 col-lg-3">
+          <div class="team-member text-center p-3 bg-white rounded-4 shadow-sm h-100">
+            <img src="images/charles.jpg" alt="Charles Ochieng" class="member-img rounded-circle mb-3" style="width: 120px; height: 120px; object-fit: cover;">
+            <h4 class="member-name">Charles Ochieng</h4>
+            <p class="member-role text-muted fw-semibold">Environmental Conservation Manager</p>
+            <p class="member-bio small">Charles brings ecological insight and grassroots experience to lead our conservation projects and promote sustainable living on the island.</p>
+          </div>
+        </div>
+  
+        <div class="col-md-6 col-lg-3">
+          <div class="team-member text-center p-3 bg-white rounded-4 shadow-sm h-100">
+            <img src="images/winny.jpg" alt="Winny Auma" class="member-img rounded-circle mb-3" style="width: 120px; height: 120px; object-fit: cover;">
+            <h4 class="member-name">Winny Auma</h4>
+            <p class="member-role text-muted fw-semibold">Education Program Coordinator</p>
+            <p class="member-bio small">Winny is passionate about youth empowerment and leads our education initiatives including scholarships and literacy development programs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+  
+
+<footer> 
+    <div class="container">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Community Works</h3>
+                <p>
+                    Building stronger communities through sustainable development, education, health, and environmental initiatives.
+                </p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61574922598829" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/GiversGlobe?t=nL_sq6ZDGML9ISwHflJtBQ&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/globegivers?igsh=b3k2cm12b3JtMWc1" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/globe-givers-03aa0a359?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/@GlobeGivers" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>    
             </div>
-            <div class="copyright">
-                <p>&copy; 2025 GlobeGivers. All Rights Reserved.</p>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    
+                    <li><a href="contact.html#volunteer">Get Involved</a></li>
+                   
+                    <li><a href="galery.html">gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <ul class="footer-links">
+                    <li>Phone: +254701432825</li>
+                    <li>Email: <a href="mailto:Info@globegivers.com">Info@globegivers.com</a></li>
+                </ul>
             </div>
         </div>
-    </footer> 
+        <div class="copyright">
+            <p>&copy; 2025 GlobeGivers. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
   <!-- JavaScript for Animations -->
   <script>
   document.addEventListener('DOMContentLoaded', function() {
@@ -1135,9 +1113,7 @@
     // Initial check on page load
     animateStats();
   });
-  </script>
-    <!-- Footer -->
-
-    <script src="script.js"></script>
+  </script>   
+   <script src="script.js"></script>
 </body>
 </html>

@@ -6,168 +6,603 @@
     <title>GlobeGivers | Making a Difference Together</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style> /* Form Styles */
-        form {
-            max-width: 500px;
-            margin: 0 auto;
-            text-align: left;
-        }
-        
-        form label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        
-        form input, form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        
-        form button {
-            width: 100%;
-            padding: 10px;
-            background-color: #ff6347;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        
-        form button:hover {
-            background-color: #ff4500;
-        }
-        .section h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
 
-.section p {
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-
-.section ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.section li {
-    margin-bottom: 10px;
-}
-
-.section .cta-btn {
-    margin-top: 20px;
-}
-        </style>
 </head>
 <body>
-<!-- Header -->
-<header>
-    <div class="container nav-container">
-        <div class="logo">
-            <h1>GlobeGivers</h1>
-        </div>
 
-        <div class="hamburger">
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
+    <!-- Header -->
+    <header class="gg-header">
+        <div class="gg-container gg-nav-container">
+            <div class="gg-logo">
+                <h1>GlobeGivers</h1>
+            </div>
+    
+            <button class="gg-hamburger" aria-label="Toggle navigation menu">
+                <span class="gg-hamburger-line"></span>
+                <span class="gg-hamburger-line"></span>
+                <span class="gg-hamburger-line"></span>
+            </button>
+    
+            <nav class="gg-nav">
+                <ul class="gg-nav-menu">
+                    <li class="gg-nav-item"><a href="index.html" class="gg-nav-link gg-active">Home</a></li>
+                    <li class="gg-nav-item gg-dropdown">
+                        <a href="#" class="gg-nav-link gg-dropdown-toggle">About Us <span class="gg-dropdown-icon">▼</span></a>
+                        <ul class="gg-dropdown-menu">
+                            <li><a href="about.html#our-history" class="gg-dropdown-item">Our History</a></li>
+                            <li><a href="about.html#mission-vision" class="gg-dropdown-item">Mission & Vision</a></li>
+                            <li><a href="about.html#our-team" class="gg-dropdown-item">Our Team</a></li>
+                            <li><a href="about.html#our-team" class="gg-dropdown-item">Partners</a></li>
+                        </ul>
+                    </li>
+                    <li class="gg-nav-item gg-dropdown">
+                        <a href="#" class="gg-nav-link gg-dropdown-toggle">Programs & Services <span class="gg-dropdown-icon">▼</span></a>
+                        <ul class="gg-dropdown-menu">
+                            <li><a href="program.html?id=agriculture" class="gg-dropdown-item">Agriculture</a></li>
+                            <li><a href="program.html?id=women-youth" class="gg-dropdown-item">women-youth programs</a></li>
+                            <li><a href="program.html?id=water" class="gg-dropdown-item">Water Projects</a></li>
+                            <li><a href="program.html?id=healthcare" class="gg-dropdown-item">Community Health</a></li>
+                            <li><a href="program.html?id=infrastructure" class="gg-dropdown-item">Community infrastructure</a></li>
+                        </ul>
+                    </li>
+                    <li class="gg-nav-item gg-dropdown">
+                        <a href="#" class="gg-nav-link gg-dropdown-toggle">Get Involved <span class="gg-dropdown-icon">▼</span></a>
+                        <ul class="gg-dropdown-menu">
+                            <li><a href="contact.html#volunteer" class="gg-dropdown-item">Volunteer</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="gg-nav-item"><a href="contact.html" class="gg-nav-link">Contact Us</a></li>
+                    <li class="gg-nav-item"><a href="https://www.mchanga.africa/fundraiser/113643" class="gg-cta-btn">Donate</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <ul class="nav-menu">
-            <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
-            <li class="nav-item dropdown">
-                <a href="#" class="nav-link">About Us</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#" class="dropdown-item">Our History</a></li>
-                    <li><a href="#" class="dropdown-item">Mission & Vision</a></li>
-                    <li><a href="#" class="dropdown-item">Our Team</a></li>
-                    <li><a href="#" class="dropdown-item">Partners</a></li>
-                </ul>
-            </li>
-            <li class="nav-item dropdown">
-                <a href="#" class="nav-link">Programs & Services</a>
-                <ul class="dropdown-menu">
-                    <li><a href="programs.html" class="dropdown-item">Education Support</a></li>
-                    <li><a href="#" class="dropdown-item">Community Health</a></li>
-                    <li><a href="#" class="dropdown-item">Environmental Projects</a></li>
-                    <li><a href="#" class="dropdown-item">Youth Development</a></li>
-                </ul>
-            </li>
-            <li class="nav-item dropdown">
-                <a href="#" class="nav-link">Get Involved</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#volunteer" class="dropdown-item">Volunteer</a></li>
-                    <li><a href="#donate" class="dropdown-item">Donate</a></li>
-                </ul>
-            </li>
-            <li class="nav-item"><a href="#" class="nav-link">Gallery</a></li>
-            <li class="nav-item"><a href="#contact" class="nav-link">Contact Us</a></li>
-            <li class="nav-item"><a href="#donate" class="cta-btn">Donate</a></li>
-        </ul>
-    </div>
-</header>
 
 <!-- Main Content -->
-<main>
-    <section id="volunteer" class="section">
-        <div class="container">
-            <h2>How to Volunteer</h2>
-            <p>Volunteering with GlobeGivers is a rewarding way to make a difference in the world. Here’s how you can get involved:</p>
-            <ul>
-                <li><strong>Step 1:</strong> Choose a Program - Select a program that aligns with your skills and interests.</li>
-                <li><strong>Step 2:</strong> Apply - Send an email to <a href="mailto:volunteer@globegivers.com">volunteer@globegivers.com</a> with your name, contact information, and the program you are interested in.</li>
-                <li><strong>Step 3:</strong> Interview - We will contact you to discuss your application and how you can contribute.</li>
-                <li><strong>Step 4:</strong> Training - Attend a training session to prepare for your role.</li>
-                <li><strong>Step 5:</strong> Get Started - Begin making a positive impact in your chosen program.</li>
-            </ul>
-            <a href="mailto:volunteer@globegivers.com" class="cta-btn">Apply Now</a>
+<main class="mfi-main">
+    <!-- Donate Section -->
+    <section id="donate" class="mfi-section mfi-section-accent">
+        <div class="mfi-container">
+            <h2 class="mfi-section-title">Support Mfangano Island</h2>
+            <p class="mfi-section-intro">Your support is crucial to our mission. Every donation, no matter the size, makes a difference in the lives of the Mfangano Island community.</p>
+            
+            <div class="mfi-donation-options">
+                <div class="mfi-card mfi-donation-card">
+                    <div class="mfi-card-icon"><i class="fas fa-credit-card"></i></div>
+                    <h4 class="mfi-card-title">Online Donation</h4>
+                    <p class="mfi-card-text">Make a secure payment through our trusted payment processors. Donations can be one-time or recurring.</p>
+                    <a href="https://www.mchanga.africa/fundraiser/113643" target="_blank" class="mfi-btn-secondary">Donate Online</a>
+                </div>             
+                               
+                <div class="mfi-card mfi-donation-card">
+                    <div class="mfi-card-icon"><i class="fas fa-phone"></i></div>
+                    <h4 class="mfi-card-title">Phone Donation</h4>
+                    <p class="mfi-card-text">Call our donation hotline to contribute via credit card:</p>
+                    <a href="tel:+254701432825" class="mfi-phone-link">+254 701 432 825</a>
+                    <p class="mfi-hours">Available Monday-Friday, 9am-5pm EAT</p>
+                </div>
+            </div>
+            
+            <div class="mfi-impact-section">
+                <h3 class="mfi-subsection-title">Your Impact</h3>
+                <div class="mfi-impact-items">
+                    <div class="mfi-impact-item">
+                        <span class="mfi-impact-value">$25</span>
+                        <p class="mfi-impact-text">Provides clean water for a family for one month</p>
+                    </div>
+                    <div class="mfi-impact-item">
+                        <span class="mfi-impact-value">$50</span>
+                        <p class="mfi-impact-text">Funds school supplies for 5 children</p>
+                    </div>
+                    <div class="mfi-impact-item">
+                        <span class="mfi-impact-value">$100</span>
+                        <p class="mfi-impact-text">Supports healthcare services for 10 individuals</p>
+                    </div>
+                    <div class="mfi-impact-item">
+                        <span class="mfi-impact-value">$500</span>
+                        <p class="mfi-impact-text">Funds a microfinance project for a women's group</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mfi-cta-container">
+                <a href="https://www.mchanga.africa/fundraiser/113643" target="_blank" class="mfi-cta-btn">Donate Now</a>
+            </div>
         </div>
     </section>
 
-    <section id="donate" class="section">
-        <div class="container">
-            <h2>Donate</h2>
-            <p>Your support is crucial to our mission. Every donation, no matter the size, makes a difference. Here’s how you can donate:</p>
-            <ul>
-                <li><strong>Online Donation:</strong> <a href="https://example.com/donate" target="_blank">Click here</a> to make a secure online donation.</li>
-                <li><strong>Mail-in Donation:</strong> Send a check or money order to our address: 123 Community Street, Nairobi, Kenya.</li>
-                <li><strong>Phone Donation:</strong> Call us at +254701432825 to make a donation over the phone.</li>
-            </ul>
-            <a href="https://example.com/donate" target="_blank" class="cta-btn">Donate Now</a>
+    <!-- Volunteer Section -->
+    <section id="volunteer" class="mfi-section">
+        <div class="mfi-container">
+            <h2 class="mfi-section-title">How to Volunteer</h2>
+            <p class="mfi-section-intro">Volunteering with GlobeGivers is a rewarding way to make a difference in the world. Here's how you can get involved:</p>
+            <div class="mfi-volunteer-steps">
+                <div class="mfi-step">
+                    <div class="mfi-step-number">1</div>
+                    <div class="mfi-step-content">
+                        <h4 class="mfi-step-title">Choose a Program</h4>
+                        <p class="mfi-step-text">Select a program that aligns with your skills and interests.</p>
+                    </div>
+                </div>
+                <div class="mfi-step">
+                    <div class="mfi-step-number">2</div>
+                    <div class="mfi-step-content">
+                        <h4 class="mfi-step-title">Apply</h4>
+                        <p class="mfi-step-text">Send an email to <a href="mailto:Info@globegivers.com" class="mfi-link">Info@globegivers.com</a> with your name, contact information, and the program you are interested in.</p>
+                    </div>
+                </div>
+                <div class="mfi-step">
+                    <div class="mfi-step-number">3</div>
+                    <div class="mfi-step-content">
+                        <h4 class="mfi-step-title">Interview</h4>
+                        <p class="mfi-step-text">We will contact you to discuss your application and how you can contribute.</p>
+                    </div>
+                </div>
+                <div class="mfi-step">
+                    <div class="mfi-step-number">4</div>
+                    <div class="mfi-step-content">
+                        <h4 class="mfi-step-title">Training</h4>
+                        <p class="mfi-step-text">Attend a training session to prepare for your role.</p>
+                    </div>
+                </div>
+                <div class="mfi-step">
+                    <div class="mfi-step-number">5</div>
+                    <div class="mfi-step-content">
+                        <h4 class="mfi-step-title">Get Started</h4>
+                        <p class="mfi-step-text">Begin making a positive impact in your chosen program.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mfi-cta-container">
+                <a href="mailto:Info@globegivers.com" class="mfi-cta-btn">Apply Now</a>
+            </div>
         </div>
     </section>
 
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>We would love to hear from you! Whether you have a question, want to get involved, or need more information, please reach out using the details below:</p>
-            <ul>
-                <li><strong>Phone:</strong> +254701432825</li>
-                <li><strong>Email:</strong> <a href="mailto:Info@globegivers.com">Info@globegivers.com</a></li>
-                <li><strong>Address:</strong> 123 Community Street, Nairobi, Kenya</li>
-            </ul>
-            <form action="#" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit" class="cta-btn">Send Message</button>
-            </form>
+    <!-- Contact Section -->
+    <section id="contact" class="mfi-section mfi-section-light">
+        <div class="mfi-container">
+            <h2 class="mfi-section-title">Contact Us</h2>
+            <p class="mfi-section-intro">We would love to hear from you! Whether you have a question, want to get involved, or need more information, please reach out using the details below.</p>
+            
+            <div class="mfi-contact-container">
+                <div class="mfi-contact-info">
+                    <div class="mfi-card mfi-info-card">
+                        <div class="mfi-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <h4 class="mfi-card-title">Visit Us</h4>
+                        <address class="mfi-address">
+                            GlobeGivers Foundation<br>
+                            P.O BOX 40-40319<br>
+                            Mfangano Island, Kenya
+                        </address>
+                    </div>
+                    
+                    <div class="mfi-card mfi-info-card">
+                        <div class="mfi-card-icon"><i class="fas fa-phone-alt"></i></div>
+                        <h4 class="mfi-card-title">Call Us</h4>
+                        <p class="mfi-contact-detail">Main Office: <a href="tel:+254701432825" class="mfi-link">+254 701 432 825</a></p>
+                        <p class="mfi-contact-detail">Volunteer Coordinator: <a href="tel:+254701432826" class="mfi-link">+254 701 432 826</a></p>
+                    </div>
+                    
+                    <div class="mfi-card mfi-info-card">
+                        <div class="mfi-card-icon"><i class="fas fa-envelope"></i></div>
+                        <h4 class="mfi-card-title">Email Us</h4>
+                        <p class="mfi-contact-detail">General Inquiries: <a href="mailto:Info@globegivers.com" class="mfi-link">Info@globegivers.com</a></p>
+                    </div>
+                    
+                    <div class="mfi-card mfi-info-card">
+                        <div class="mfi-card-icon"><i class="fas fa-clock"></i></div>
+                        <h4 class="mfi-card-title">Office Hours</h4>
+                        <p class="mfi-hours-detail">Monday - Friday: 9am - 5pm EAT</p>
+                        <p class="mfi-hours-detail">Saturday: 10am - 2pm EAT</p>
+                        <p class="mfi-hours-detail">Sunday: Closed</p>
+                    </div>
+                </div>
+                <div style="width: 100%; height: 400px; border-radius: 12px; overflow: hidden;">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      style="border:0"
+                      loading="lazy"
+                      allowfullscreen
+                      referrerpolicy="no-referrer-when-downgrade"
+                      src="https://www.google.com/maps?q=-0.4902710,34.0363980&hl=es;z=14&output=embed">
+                    </iframe>
+                  </div>
+               
+            </div>
         </div>
     </section>
 </main>
 
+<style>
+.mfi-main {
+    font-family: 'Open Sans', sans-serif;
+    color: #131111;
+    line-height: 1.6;
+}
+
+.mfi-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Section Styles */
+.mfi-section {
+    padding: 80px 0;
+}
+
+.mfi-section-accent {
+    background-color: #f5f9ff;
+}
+
+.mfi-section-light {
+    background-color: #fafafa;
+}
+
+.mfi-section-title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.mfi-section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #3498db;
+    margin: 15px auto 0;
+}
+
+.mfi-section-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.mfi-subsection-title {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    text-align: center;
+    margin: 30px 0;
+}
+
+/* Card Styles */
+.mfi-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.mfi-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.mfi-card-icon {
+    font-size: 2.5rem;
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+.mfi-card-title {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.mfi-card-text {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Button Styles */
+.mfi-cta-btn {
+    display: inline-block;
+    background: #0feb21;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.mfi-cta-btn:hover {
+    background: #34df0a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.mfi-btn-secondary {
+    display: inline-block;
+    background: #11527e;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.mfi-btn-secondary:hover {
+    background: #104b72;
+}
+
+.mfi-cta-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Link Styles */
+.mfi-link {
+    color: #124769;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.mfi-link:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+.mfi-phone-link {
+    display: block;
+    color: #164b6e;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 10px 0;
+    text-decoration: none;
+}
+
+/* Address & Hours */
+.mfi-address {
+    font-style: normal;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+.mfi-hours, .mfi-hours-detail {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.mfi-contact-detail {
+    margin: 8px 0;
+}
+
+/* Donation Section Specific */
+.mfi-donation-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.mfi-donation-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mfi-impact-section {
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 40px 0;
+}
+
+.mfi-impact-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.mfi-impact-item {
+    text-align: center;
+    padding: 20px;
+}
+
+.mfi-impact-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #183174;
+    margin-bottom: 10px;
+}
+
+.mfi-impact-text {
+    color: #070707;
+}
+
+/* Volunteer Section Specific */
+.mfi-volunteer-steps {
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.mfi-step {
+    display: flex;
+    margin-bottom: 30px;
+    align-items: flex-start;
+}
+
+.mfi-step-number {
+    background: #0f4e77;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.mfi-step-content {
+    flex-grow: 1;
+}
+
+.mfi-step-title {
+    margin: 0 0 10px;
+    color: #2c3e50;
+}
+
+.mfi-step-text {
+    margin: 0;
+    color: #555;
+}
+
+/* Contact Section Specific */
+.mfi-contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.mfi-contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.mfi-info-card {
+    height: 100%;
+}
+
+.mfi-form-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.mfi-form-title {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.mfi-form-group {
+    margin-bottom: 20px;
+}
+
+.mfi-form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.mfi-form-input,
+.mfi-form-select,
+.mfi-form-textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.mfi-form-input:focus,
+.mfi-form-select:focus,
+.mfi-form-textarea:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.mfi-form-checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.mfi-checkbox {
+    margin-right: 10px;
+}
+
+.mfi-checkbox-label {
+    font-weight: normal;
+}
+
+.mfi-contact-form button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .mfi-section {
+        padding: 60px 0;
+    }
+    
+    .mfi-contact-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .mfi-contact-info {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mfi-section-title {
+        font-size: 2rem;
+    }
+    
+    .mfi-impact-section {
+        padding: 30px 20px;
+    }
+    
+    .mfi-step {
+        flex-direction: column;
+    }
+    
+    .mfi-step-number {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .mfi-donation-options,
+    .mfi-contact-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .mfi-section {
+        padding: 40px 0;
+    }
+    
+    .mfi-section-intro {
+        margin-bottom: 30px;
+    }
+}
+</style>
+
 <!-- Footer -->
-<footer>
+<footer> 
     <div class="container">
         <div class="footer-container">
             <div class="footer-col">
@@ -186,13 +621,13 @@
             <div class="footer-col">
                 <h3>Quick Links</h3>
                 <ul class="footer-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Programs & Services</a></li>
-                    <li><a href="#">Get Involved</a></li>
-                    <li><a href="#">News & Events</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    
+                    <li><a href="contact.html#volunteer">Get Involved</a></li>
+                   
+                    <li><a href="galery.html">gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -200,7 +635,6 @@
                 <ul class="footer-links">
                     <li>Phone: +254701432825</li>
                     <li>Email: <a href="mailto:Info@globegivers.com">Info@globegivers.com</a></li>
-                    <li>Address: 123 Community Street, Nairobi, Kenya</li>
                 </ul>
             </div>
         </div>

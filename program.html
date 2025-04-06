@@ -223,50 +223,51 @@
     </style>
     <body>
     <!-- Header -->
-    <header>
-        <div class="container nav-container">
-            <div class="logo">
+    <header class="gg-header">
+        <div class="gg-container gg-nav-container">
+            <div class="gg-logo">
                 <h1>GlobeGivers</h1>
             </div>
-
-            <div class="hamburger">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </div>
-
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link">About Us</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#" class="dropdown-item">Our History</a></li>
-                        <li><a href="#" class="dropdown-item">Mission & Vision</a></li>
-                        <li><a href="#" class="dropdown-item">Our Team</a></li>
-                        <li><a href="#" class="dropdown-item">Partners</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link">Programs & Services</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="programs.html" class="dropdown-item">Education Support</a></li>
-                        <li><a href="#" class="dropdown-item">Community Health</a></li>
-                        <li><a href="#" class="dropdown-item">Environmental Projects</a></li>
-                        <li><a href="#" class="dropdown-item">Youth Development</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link">Get Involved</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#" class="dropdown-item">Volunteer</a></li>
-                        
-                    </ul>
-                </li>
-               
-                <li class="nav-item"><a href="#" class="nav-link">Gallery</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
-                <li class="nav-item"><a href="#" class="cta-btn">Donate</a></li>
-            </ul>
+    
+            <button class="gg-hamburger" aria-label="Toggle navigation menu">
+                <span class="gg-hamburger-line"></span>
+                <span class="gg-hamburger-line"></span>
+                <span class="gg-hamburger-line"></span>
+            </button>
+    
+            <nav class="gg-nav">
+                <ul class="gg-nav-menu">
+                    <li class="gg-nav-item"><a href="index.html" class="gg-nav-link gg-active">Home</a></li>
+                    <li class="gg-nav-item gg-dropdown">
+                        <a href="#" class="gg-nav-link gg-dropdown-toggle">About Us <span class="gg-dropdown-icon">▼</span></a>
+                        <ul class="gg-dropdown-menu">
+                            <li><a href="about.html#our-history" class="gg-dropdown-item">Our History</a></li>
+                            <li><a href="about.html#mission-vision" class="gg-dropdown-item">Mission & Vision</a></li>
+                            <li><a href="about.html#our-team" class="gg-dropdown-item">Our Team</a></li>
+                            <li><a href="about.html#our-team" class="gg-dropdown-item">Partners</a></li>
+                        </ul>
+                    </li>
+                    <li class="gg-nav-item gg-dropdown">
+                        <a href="#" class="gg-nav-link gg-dropdown-toggle">Programs & Services <span class="gg-dropdown-icon">▼</span></a>
+                        <ul class="gg-dropdown-menu">
+                            <li><a href="program.html?id=agriculture" class="gg-dropdown-item">Agriculture</a></li>
+                            <li><a href="program.html?id=women-youth" class="gg-dropdown-item">women-youth programs</a></li>
+                            <li><a href="program.html?id=water" class="gg-dropdown-item">Water Projects</a></li>
+                            <li><a href="program.html?id=healthcare" class="gg-dropdown-item">Community Health</a></li>
+                            <li><a href="program.html?id=infrastructure" class="gg-dropdown-item">Community infrastructure</a></li>
+                        </ul>
+                    </li>
+                    <li class="gg-nav-item gg-dropdown">
+                        <a href="#" class="gg-nav-link gg-dropdown-toggle">Get Involved <span class="gg-dropdown-icon">▼</span></a>
+                        <ul class="gg-dropdown-menu">
+                            <li><a href="contact.html#volunteer" class="gg-dropdown-item">Volunteer</a></li>
+                        </ul>
+                    </li>
+                  
+                    <li class="gg-nav-item"><a href="contact.html" class="gg-nav-link">Contact Us</a></li>
+                    <li class="gg-nav-item"><a href="https://www.mchanga.africa/fundraiser/113643" class="gg-cta-btn">Donate</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
     <body>
@@ -321,16 +322,15 @@
                   <h3>Get Involved</h3>
                   <p>Want to support this program? Here's how you can help:</p>
                   <div class="involvement-options">
-                      <a href="#" class="btn btn-primary">Donate</a>
-                      <a href="#" class="btn btn-secondary">Volunteer</a>
-                      <a href="#" class="btn btn-secondary">Learn More</a>
+                      <a href="https://www.mchanga.africa/fundraiser/113643" class="btn btn-primary">Donate</a>
+                      
                   </div>
               </div>
           </div>
       </section>
   
       <!-- Footer will go here (same as index.html) -->
-    <footer> 
+      <footer> 
         <div class="container">
             <div class="footer-container">
                 <div class="footer-col">
@@ -349,13 +349,13 @@
                 <div class="footer-col">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Programs & Services</a></li>
-                        <li><a href="#">Get Involved</a></li>
-                        <li><a href="#">News & Events</a></li>
-                        <li><a href="#">Gallery</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        
+                        <li><a href="contact.html#volunteer">Get Involved</a></li>
+                       
+                        <li><a href="galery.html">gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">

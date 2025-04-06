@@ -1,42 +1,43 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile Navigation Toggle
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
+    const hamburger = document.querySelector('.gg-hamburger');
+    const nav = document.querySelector('.gg-nav');
+    const dropdowns = document.querySelectorAll('.gg-dropdown');
     
+    // Toggle mobile menu
     hamburger.addEventListener('click', function() {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
+        hamburger.classList.toggle('gg-active');
+        nav.classList.toggle('gg-active');
     });
-
-    // Dropdown Menu Functionality
-    const dropdowns = document.querySelectorAll('.dropdown');
     
-    dropdowns.forEach(dropdown => {
-        const link = dropdown.querySelector('.nav-link');
-        
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
+    // Handle dropdowns on mobile
+    if (window.innerWidth <= 991) {
+        dropdowns.forEach(dropdown => {
+            const toggle = dropdown.querySelector('.gg-dropdown-toggle');
             
-            // Close other dropdowns
-            dropdowns.forEach(otherDropdown => {
-                if (otherDropdown !== dropdown) {
-                    otherDropdown.querySelector('.dropdown-menu').classList.remove('active');
-                }
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                dropdown.classList.toggle('gg-open');
             });
-            
-            // Toggle current dropdown
-            dropdown.querySelector('.dropdown-menu').classList.toggle('active');
         });
-    });
-
-    // Close dropdowns when clicking outside
+    }
+    
+    // Close mobile menu when clicking outside
     document.addEventListener('click', function(e) {
-        if (!e.target.closest('.dropdown')) {
-            document.querySelectorAll('.dropdown-menu').forEach(menu => {
-                menu.classList.remove('active');
-            });
+        if (!nav.contains(e.target) && !hamburger.contains(e.target) && nav.classList.contains('gg-active')) {
+            nav.classList.remove('gg-active');
+            hamburger.classList.remove('gg-active');
         }
     });
+    
+    // Adjust for window resize
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 991) {
+            nav.classList.remove('gg-active');
+            hamburger.classList.remove('gg-active');
+            dropdowns.forEach(dropdown => dropdown.classList.remove('gg-open'));
+        }
+    });
+});
 
     // Testimonial Slider
     const slides = document.querySelectorAll('.testimonial-slide');
@@ -289,5 +290,5 @@ document.addEventListener('DOMContentLoaded', function() {
             img.removeAttribute('data-src');
         });
     }
-});
+
     
