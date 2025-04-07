@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const programsData = {
         'water': {
             title: 'Community Water Project',
-            image: '/images/img1.jpg',
+            image: '/images/water1.jpg',
             description: `
                 <p>Many families on Mfangano Island lack access to clean water and depend on the heavily polluted Lake Victoria. Our Community Water Project addresses this critical issue by establishing clean water collection points throughout the island.</p>
                 <p>Clean water is essential for health, education, and economic development. When communities have reliable access to safe water, children spend less time collecting water and more time in school, waterborne illnesses decrease, and overall quality of life improves.</p>
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Train 20 local water management committees for sustainable operations'
             ],
             gallery: [
-                '/images/water1.jpg',
+                '/images/water5.jpg',
                 '/images/water2.jpg',
                 '/images/water3.jpg',
                 '/images/water4.jpg'
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'agriculture': {
             title: 'Organic & Permaculture Agriculture',
-            image: '/images/img1.jpg',
+            image: '/images/agri5.jpg',
             description: `
                 <p>We promote sustainable farming by encouraging soil-friendly crops, biodiversity conservation, and eco-friendly land-use practices. Our permaculture approach helps farmers improve yields while preserving trees and protecting wildlife habitats.</p>
                 <p>Through training workshops, demonstration gardens, and seed exchanges, we've helped hundreds of local farmers transition to more sustainable and productive agricultural methods.</p>
@@ -51,15 +51,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Develop market connections for organic produce'
             ],
             gallery: [
-                '/images/agriculture1.jpg',
-                '/images/agriculture2.jpg',
-                '/images/agriculture3.jpg',
-                '/images/agriculture4.jpg'
+                '/images/agri1.jpg',
+                '/images/agri2.jpg',
+                '/images/agri3.jpg',
+                '/images/agri4.jpg'
             ]
         },
         'women-youth': {
             title: 'Women & Youth Empowerment',
-            image: '/images/img1.jpg',
+            image: '/images/init1.jpg',
             description: `
                 <p>We empower women and youth through financial literacy, education, and small business support. Our programs focus on building skills and confidence while providing access to resources needed for economic independence.</p>
                 <p>Our microfinance initiative provides small loans to help individuals start or expand businesses in farming, retail, and other sectors. We combine these loans with business training and ongoing mentorship.</p>
@@ -74,15 +74,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Create mentorship network connecting 50 established and aspiring entrepreneurs'
             ],
             gallery: [
-                '/images/empowerment1.jpg',
-                '/images/empowerment2.jpg',
-                '/images/empowerment3.jpg',
-                '/images/empowerment4.jpg'
+                '/images/init1.jpg',
+                '/images/init2.jpg',
+                '/images/init3.jpg',
+                '/images/init4.jpg'
             ]
         },
         'healthcare': {
             title: 'Community Health Care Services',
-            image: '/images/img1.jpg',
+            image: '/images/health1.jpg',
             description: `
                 <p>Our healthcare program enhances access to medical care by providing affordable and preventive health services. We focus on primary care, maternal and child health, and health education.</p>
                 <p>The Wakinga Community Health Center serves as our hub for healthcare delivery, offering basic medical services, prenatal care, and health education programs.</p>
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'infrastructure': {
             title: 'Community Infrastructure Initiatives',
-            image: '/images/img1.jpg',
+            image: '/images/infra5.jpg',
             description: `
                 <p>We support education and community development by improving local infrastructure and ensuring students have access to quality learning opportunities and facilities.</p>
                 <p>Our infrastructure projects include school renovations, classroom construction, solar power installations, and community centers that serve multiple functions.</p>
@@ -120,10 +120,44 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Create 5 safe play spaces for children'
             ],
             gallery: [
-                '/images/infrastructure1.jpg',
-                '/images/infrastructure2.jpg',
-                '/images/infrastructure3.jpg',
-                '/images/infrastructure4.jpg'
+                '/images/infra1.jpg',
+                '/images/infra2.jpg',
+                '/images/infra3.jpg',
+                '/images/infra4.jpg'
+            ]
+        },
+         'accommodation': {
+            title: 'Volunteer Accommodation',
+            image: '/images/accommodation.jpg',
+            description: `
+                <p>Join us in creating lasting change while immersing yourself in the beauty of Kenya. As a volunteer, you’ll be part of a vibrant, welcoming community that truly values your presence and contributions.</p>
+                <p>To ensure your comfort and enrich your experience, we provide:</p>
+                <ul>
+                    <li>✅ Three fresh, home-cooked meals daily – Enjoy delicious, locally sourced food while supporting community farming.</li>
+                    <li>✅ Comfortable accommodation – Rest in a clean, safe, and friendly environment close to the heart of the village.</li>
+                    <li>✅ A budget-friendly stay – We’ve kept our rates low to ensure volunteering is accessible to all.</li>
+                </ul>
+                <p>Your small daily contribution directly supports local farmers, education, healthcare access, and environmental conservation.</p>
+                <p><strong>Rates:</strong></p>
+                <ul>
+                    <li>💰 Adults: $10 per day</li>
+                    <li>👦 Children (Under 13): $5 per day</li>
+                </ul>
+                <p>By staying with us, you're not just volunteering — you’re uplifting lives and building a sustainable future together with the community.</p>
+            `,
+            peopleHelped: 'Hundreds of volunteers',
+            yearStarted: 2016,
+            goals: [
+                'Support 500+ volunteers with meaningful, affordable stays by 2026',
+                'Promote sustainable tourism and local culture exchange',
+                'Increase funding for local health and education through volunteer contributions',
+                'Enhance volunteer experience with cultural immersion activities'
+            ],
+            gallery: [
+                '/images/accommodation1.jpg',
+                '/images/accommodation2.jpg',
+                
+                '/images/agri5.jpg'
             ]
         }
     };
