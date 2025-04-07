@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 '/images/accommodation1.jpg',
                 '/images/accommodation2.jpg',
                 
-                '/images/agri5.jpg'
+                '/images/accommodation3.jpg'
             ]
         }
     };
