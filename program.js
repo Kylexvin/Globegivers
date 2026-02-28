@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
     }
     
+
     // Program data - in a real app, this might come from a database or API
     const programsData = {
         'water': {
